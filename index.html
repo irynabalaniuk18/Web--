@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій список справ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Мій список справ</h1>
+        <p class="subtitle">Плануй свій день легко!</p>
+
+        <div class="input-block">
+            <input type="text" id="taskInput" placeholder="Введи нове завдання...">
+            <button id="addButton">Додати</button>
+        </div>
+
+        <p id="counter">Усього: 0 | Не виконано: 0</p>
+
+        <div class="filters">
+            <button class="filter active" data-filter="all">Усі</button>
+            <button class="filter" data-filter="active">Активні</button>
+            <button class="filter" data-filter="completed">Виконані</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <button id="clearButton" class="clear-button">
+            Очистити виконані
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

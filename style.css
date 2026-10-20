@@ -1,0 +1,166 @@
+
+/* Загальні налаштування сторінки */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+    background: #eaf4ff;
+    color: #26364a;
+}
+
+/* Основний блок */
+.container {
+    max-width: 550px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 8px;
+    text-align: center;
+    color: #2864a5;
+}
+
+.subtitle {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #718096;
+}
+
+/* Поле введення та кнопка */
+.input-block {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: 2px solid #8bbcff;
+}
+
+button {
+    padding: 11px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #3478c9;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* Лічильник завдань */
+#counter {
+    margin: 22px 0;
+    color: #4e2706;
+    font-size: 14px;
+}
+
+/* Фільтри */
+.filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.filter {
+    flex: 1;
+    background: #e5edf7;
+    color: #34516f;
+}
+
+.filter.active {
+    background: #3478c9;
+    color: white;
+}
+
+/* Список завдань */
+#taskList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 12px;
+    background: #f4f8fc;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.task span {
+    flex: 1;
+}
+
+.task input {
+    flex: none;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+/* Виконане завдання */
+.task.completed span {
+    color: #8995a3;
+    text-decoration: line-through;
+}
+
+/* Кнопка видалення */
+.delete-button {
+    flex: none;
+    padding: 8px 10px;
+    background: #e65b65;
+}
+
+/* Очищення виконаних */
+.clear-button {
+    width: 100%;
+    margin-top: 15px;
+    background: #526579;
+}
+
+/* Адаптація для телефонів */
+@media (max-width: 480px) {
+    .container {
+        margin: 10px auto;
+        padding: 20px 15px;
+    }
+
+    .input-block {
+        flex-direction: column;
+    }
+
+    .input-block button {
+        width: 100%;
+    }
+
+    .filters {
+        gap: 5px;
+    }
+
+    .filter {
+        padding: 10px 5px;
+    }
+}
